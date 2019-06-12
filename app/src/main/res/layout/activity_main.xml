@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Button
+        android:id="@+id/setFirstImgBtn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Choose 1st image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/setSecondImgBtn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Choose 2nd image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setFirstImgBtn"/>
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_height="140dp"
+        android:layout_width="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/setSecondImgBtn"/>
+
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_height="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_width="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img1"/>
+
+    <Button
+        android:id="@+id/subtractImagesBtn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Subtract images"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img2"/>
+
+    <ImageView
+        android:id="@+id/resultingImg"
+        android:layout_height="140dp"
+        android:layout_width="140dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subtractImagesBtn"/>
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:id="@+id/huMomentsWrapper"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/subtractImagesBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setSecondImgBtn">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/huMoments1"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/huMoments2"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/shapeDistanceText"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/drawBtn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Draw kanji"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resultingImg"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
